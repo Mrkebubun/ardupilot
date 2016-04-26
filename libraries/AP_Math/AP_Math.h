@@ -26,9 +26,12 @@
 AP_PARAMDEFV(Vector3f, Vector3f, AP_PARAM_VECTOR3F);
 
 
-auto const constrain_float = &constrain_value<float>;
-auto const constrain_int16 = &constrain_value<int16_t>;
-auto const constrain_int32 = &constrain_value<int32_t>;
+//auto const constrain_float = &constrain_value<float>;
+float constrain_float(float const & v,float const & low, float const & high);
+int16_t constrain_int16(int16_t v,int16_t low, int16_t high) ;
+int32_t constrain_int32(int32_t v,int32_t low, int32_t high) ;
+//auto const constrain_int16 = &constrain_value<int16_t>;
+//auto const constrain_int32 = &constrain_value<int32_t>;
 
 /* 
  * @brief: Gets two values and returns the smaller one.

@@ -185,7 +185,11 @@ T constrain_value(const T &amt, const T &low, const T &high) {
     return amt < low ? low : (amt > high ? high : amt);
 }
 
-template int constrain_value<int>(const int &amt, const int &low, const int &high);
-template short constrain_value<short>(const short &amt, const short &low, const short &high);
-template float constrain_value<float>(const float &amt, const float &low, const float &high);
+float constrain_float(float const & v,float const & low, float const & high) { return constrain_value(v,low,high);}
+int16_t constrain_int16(int16_t v,int16_t low, int16_t high) { return constrain_value(v,low,high);}
+int32_t constrain_int32(int32_t v,int32_t low, int32_t high) { return constrain_value(v,low,high);}
+
+//template int constrain_value<int>(const int &amt, const int &low, const int &high);
+//template short constrain_value<short>(const short &amt, const short &low, const short &high);
+//template float constrain_value<float>(const float &amt, const float &low, const float &high);
 
