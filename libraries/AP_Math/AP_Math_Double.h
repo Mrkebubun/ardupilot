@@ -104,6 +104,22 @@ auto wrap_360(const T &angle, float unit_mod = 1) -> decltype(std::fmod(angle, 3
 }
 
 /*
+ * Wrap an angle in centi-degrees
+ */
+template <class T>
+auto wrap_360_cd(const T &angle) -> decltype(wrap_360(angle, 100.f)) {
+    return wrap_360(angle, 100.f);
+}
+
+/*
+ * Wrap an angle in centi-degrees
+ */
+template <class T>
+auto wrap_180_cd(const T &angle) -> decltype(wrap_180(angle, 100.f)) {
+    return wrap_180(angle, 100.f);
+}
+
+/*
   wrap an angle defined in radians to -PI ~ PI (equivalent to +- 180 degrees)
  */
 template <class T>

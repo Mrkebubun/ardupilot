@@ -30,18 +30,6 @@ auto const constrain_float = &constrain_value<float>;
 auto const constrain_int16 = &constrain_value<int16_t>;
 auto const constrain_int32 = &constrain_value<int32_t>;
 
-/*
- * Wrap an angle in centi-degrees
- */
-template <class T>
-auto wrap_360_cd(const T &angle) -> decltype(wrap_360(angle, 100.f));
-
-/*
- * Wrap an angle in centi-degrees
- */
-template <class T>
-auto wrap_180_cd(const T &angle) -> decltype(wrap_180(angle, 100.f));
-
 /* 
  * @brief: Gets two values and returns the smaller one.
  */
